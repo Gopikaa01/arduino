@@ -14,14 +14,9 @@ if(sensorValue>100)
 {if(buttonstate==0)
   
 { buttonState=1;
-
-
-
-  digitalWrite(ledpin,LOW);
-  
+digitalWrite(ledpin,HIGH);
+delay(500);
 }
-
-void loop() {
-  // put your main code here, to run repeatedly:
-
+}else{buttonstate=0;
+     }
 }
