@@ -1,18 +1,22 @@
-const int ledpin=13;
-const int buttonpin=2;
-const int buttonstate=0;
+const int piezopin=7;
+const int ledpin=9;
+int buttonstate=0;
 void setup() {
 pinMode(ledpin,OUTPUT);
-pinMode(buttonpin,OUTPUT);
+pinMode(piezopin,INPUT);
 }
-buttonstate=digitalRead(buttonpin);
-
-
-if(buttonstate==HIGH)
-{digitalWrite(ledpin,HIGH);
-}
-else
+void loop()
 {
+int sensorValue=analogRead(piezoPin);
+
+
+if(sensorValue>100)
+{if(buttonstate==0)
+  
+{ buttonState=1;
+
+
+
   digitalWrite(ledpin,LOW);
   
 }
